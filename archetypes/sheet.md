@@ -4,6 +4,10 @@ type: "sheet"
 date: {{ substr .Name 0 10 }}
 time: "{{ replace (substr .Name 11 5) "-" ":" }}"
 toc: true
+tags:
+- {{ delimit (split (substr .Name  17) "-" | first 1) "" | lower }}
+categories:
+- note
 ---
 
 # {{ delimit (split (substr .Name  17) "-" | first 2) " - " | humanize   }}
