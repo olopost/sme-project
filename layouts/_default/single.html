@@ -63,7 +63,7 @@
                 <li class="my-2">
                   <a class="link" href="{{ .Permalink}}">{{ .Date.Format "January 2, 2006" }} - 
                     {{ if ne .Params.type "other"}}
-                    {{ .Param "type" | title }}
+                    {{ .Param "type" | title }} - {{ .Param "description" }}
                   {{ else }}
                     {{ .Param "description" }}
                   {{end}}</a>
