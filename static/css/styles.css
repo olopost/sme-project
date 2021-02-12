@@ -402,6 +402,12 @@ ul {
   padding: 0;
 }
 
+ul li {
+  list-style: disc;
+  margin: 0;
+  padding: 10px;
+}
+
 /**
  * Tailwind custom reset styles
  */
