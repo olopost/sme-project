@@ -1,5 +1,6 @@
 ---
 project: {{ delimit (split (substr .Name  17) "-" | first 1) "" | humanize   }}
+description: "desc"
 type: "note"
 date: {{ substr .Name 0 10 }}
 time: "{{ replace (substr .Name 11 5) "-" ":" }}"

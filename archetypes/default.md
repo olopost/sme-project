@@ -1,5 +1,6 @@
 ---
 project: "{{ .Dir | path.Base | humanize | title }}"
+description: "desc"
 type: "follow-up"
 date: {{ substr .Name 0 10 }}
 time: "{{ replace (substr .Name 11 5) "-" ":" }}"
