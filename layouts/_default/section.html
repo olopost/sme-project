@@ -17,11 +17,7 @@
             {{ range .Pages.ByParam "time" }}
             <li class="my-2">
               <a href="{{ .Permalink }}" class="link">{{ .Params.time }} - {{ .Params.project }} -
-                {{ if ne .Params.type "other"}}
-                  {{ .Param "type" | title }}
-                {{ else }}
                   {{ .Param "description" }}
-                {{end}}
               </a>
             </li>
             {{ end }}
