@@ -8,7 +8,7 @@ toc: false
 tags:
 - {{ delimit (split (substr .Name  17) "-" | first 1) "" | lower }}
 categories:
-- note
+- synthese
 ---
 # {{ delimit (split (substr .Name  17) "-" | first 2) " - " | humanize   }}
 
