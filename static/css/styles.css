@@ -630,7 +630,7 @@ video {
   padding-bottom: 0.25rem;
 }
 
-.hugo-content h1,
+/*.hugo-content h1,
 .hugo-content h2 {
   font-weight: 700;
   --bg-opacity: 0.4;
@@ -705,7 +705,7 @@ video {
   font-weight: 400;
   vertical-align: text-bottom;
 }
-
+*/
 .hugo-content table {
   border-collapse: collapse;
   table-layout: auto;
