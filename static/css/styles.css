@@ -42,7 +42,6 @@ main {
 h1 {
   font-family: univia-pro, sans-serif;
  color: rgba(36, 42, 117, 1);
- font-size: 36pt;
   margin: 0.67em 0;
 }
 
@@ -630,30 +629,21 @@ video {
   padding-bottom: 0.25rem;
 }
 
-/*.hugo-content h1,
+.hugo-content h1,
 .hugo-content h2 {
   font-weight: 700;
-  --bg-opacity: 0.4;
-  background-color: #7c7fab;
-  background-color: rgba(124, 127, 171, var(--bg-opacity));
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   border-left-width: 4px;
   padding-left: 0.75rem;
-  --border-opacity: 1;
-  border-color: #242a75;
-  border-color: rgba(36, 42, 117, var(--border-opacity));
   -moz-column-break-after: avoid;
        break-after: avoid-page;
 }
 
 .hugo-content h3 {
   font-weight: 700;
-  --bg-opacity: 1;
-  background-color: #f7fafc;
-  background-color: rgba(247, 250, 252, var(--bg-opacity));
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   margin-top: 1.5rem;
@@ -663,9 +653,6 @@ video {
   font-size: 1.25rem;
   border-left-width: 2px;
   padding-left: 0.25rem;
-  --border-opacity: 1;
-  border-color: #cbd5e0;
-  border-color: rgba(203, 213, 224, var(--border-opacity));
   -moz-column-break-after: avoid;
        break-after: avoid-page;
 }
@@ -705,7 +692,7 @@ video {
   font-weight: 400;
   vertical-align: text-bottom;
 }
-*/
+
 .hugo-content table {
   border-collapse: collapse;
   table-layout: auto;
