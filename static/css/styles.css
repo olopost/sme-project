@@ -395,7 +395,9 @@ fieldset {
   padding: 0;
 }
 
-ol,
+ol {
+	style-list: decimal;
+}
 ul {
   list-style: none;
   margin: 0;
