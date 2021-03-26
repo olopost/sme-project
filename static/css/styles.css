@@ -44,6 +44,28 @@ h1 {
  color: rgba(36, 42, 117, 1);
   margin: 0.67em 0;
 }
+h2 {
+  font-family: univia-pro, sans-serif;
+ color: rgba(93, 191, 212, 1);
+  margin: 0.67em 0;
+}
+h3 {
+  font-family: univia-pro, sans-serif;
+ color: rgba(93, 191, 212, 1);
+  margin: 0.67em 0;
+}
+h4 {
+  font-family: 'Futura PT', sans-serif;
+ color: rgba(0, 0, 0, 1);
+  margin: 0.67em 0;
+}
+body {
+  font-family: 'Futura PT', sans-serif;
+ color: rgba(0, 0, 0, 1);
+  margin: 0.67em 0;
+}
+
+
 
 /* Grouping content
    ========================================================================== */
