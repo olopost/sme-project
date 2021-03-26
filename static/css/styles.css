@@ -8,6 +8,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url('http://fonts.cdnfonts.com/css/univia-pro');
+@import url('http://fonts.cdnfonts.com/css/futura-condensed-pt');
 
 html {
   line-height: 1.15; /* 1 */
@@ -39,6 +40,8 @@ main {
  */
 
 h1 {
+  font-family: univia-pro, sans-serif;
+ color: rgba(36, 42, 117, 1);
   font-size: 2em;
   margin: 0.67em 0;
 }
