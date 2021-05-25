@@ -14,7 +14,7 @@
   <span class=""> / </span>
   <a href="/project/{{ .Params.project | urlize }}" class="link">{{ .Params.project }}</a>
   <span class=""> / </span>
-  <a href="{{ .Site.meyn.edit }}{{ .Permalink | absURL }}">Edit</a>
+  <a href="{{ .Site.Params.edit }}{{ .Permalink | absURL }}">Edit</a>
   <span>{{ .Date.Format "January 2, 2006" }}</span>
   <span class=""> / </span>
   {{ $taxonomy := "tags" }} {{ with .Param $taxonomy }}
