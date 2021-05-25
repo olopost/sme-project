@@ -1,6 +1,6 @@
 ---
 project: {{ delimit (split (substr .Name  17) "-" | first 1) "" | humanize   }}
-description: "suivi {{ substr .Name 0 10 }}"
+description: "Archi board du  {{ substr .Name 0 10 }}"
 type: "suivi"
 date: {{ substr .Name 0 10 }}
 time: "{{ replace (substr .Name 11 5) "-" ":" }}"
