@@ -1270,8 +1270,7 @@ video {
 	margin:0;
 	padding:0;
 	position:absolute;
-	right:24px;
-	bottom:-12px;
+  right:0px;
 	list-style:none;
 }
 
