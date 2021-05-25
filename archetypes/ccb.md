@@ -7,7 +7,7 @@ time: "{{ replace (substr .Name 11 5) "-" ":" }}"
 toc: false
 tags:
 - CCB
-- {{ delimit (split (substr .Name  17) "-" | first 1) "" | lower }}
+- {{ delimit (split (substr .Name  17) "-" | first 1) "" | upper }}
 categories:
 - etude
 ---

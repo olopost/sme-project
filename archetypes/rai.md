@@ -7,7 +7,7 @@ time: "{{ replace (substr .Name 11 5) "-" ":" }}"
 toc: false
 tags:
 - RAI
-- {{ delimit (split (substr .Name  17) "-" | first 1) "" | lower }}
+- {{ delimit (split (substr .Name  17) "-" | first 1) "" | upper }}
 categories:
 - suivi
 ---
