@@ -6,9 +6,10 @@ date: {{ substr .Name 0 10 }}
 time: "{{ replace (substr .Name 11 5) "-" ":" }}"
 toc: false
 tags:
+- RAI
 - {{ delimit (split (substr .Name  17) "-" | first 1) "" | lower }}
 categories:
-- etude
+- suivi
 ---
 # {{ delimit (split (substr .Name  17) "-" | first 2) " - " | humanize   }}
 
