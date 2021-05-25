@@ -13,3 +13,6 @@ min_version = "0.0.1"
 [author]
   name = "Samuel MEYNARD"
   homepage = "https://wiki.meyn.fr"
+
+[meyn]
+edit = "https://edit.local.meyn.fr/"
