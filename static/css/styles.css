@@ -788,7 +788,8 @@ video {
 .hugo-content a:hover {
   --bg-opacity: 1;
   background-color: #bee3f8;
-  background-color: rgba(190, 227, 248, var(--bg-opacity));
+  border-radius: 12px;
+  background: #bee3f8;
 }
 
 .container {
@@ -1330,3 +1331,314 @@ video {
 .tags a:hover{background:#555;}
 
 .tags a:hover:before{border-color:transparent #555 transparent transparent;}
+
+.link {
+  --link-underline: none;
+  --link-blank-font: none;
+  --link-blank-content: none;
+  margin: 0;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 1;
+}
+
+.link {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  min-height: 2rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+}
+
+.link--align-on-content {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+.link:not([class*="link--icon-"])[class^="fr-fi-"],
+.link:not([class*="link--icon-"])[class*=" fr-fi-"] {
+  flex-direction: row;
+  overflow: hidden;
+  max-width: 2rem;
+  max-height: 2rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.link:not([class*="link--icon-"])[class^="fr-fi-"]::before,
+.link:not([class*="link--icon-"])[class*=" fr-fi-"]::before {
+  margin-left: 0;
+  margin-right: 0.25rem;
+  font-size: 1.5rem;
+}
+
+.link--align-on-content:not([class*="link--icon-"])[class^="fr-fi-"],
+.link--align-on-content:not([class*="link--icon-"])[class*=" fr-fi-"] {
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
+}
+
+.link--icon-left[class^="fr-fi-"], .link--icon-left[class*=" fr-fi-"] {
+  flex-direction: row;
+  overflow: initial;
+  max-width: none;
+  max-height: none;
+}
+
+.link--icon-left[class^="fr-fi-"]::before,
+.link--icon-left[class*=" fr-fi-"]::before {
+  margin-left: -0.25rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+.link--align-on-content.link--icon-left[class^="fr-fi-"],
+.link--align-on-content.link--icon-left[class*=" fr-fi-"] {
+  margin-left: -0.5rem;
+  margin-right: -0.75rem;
+}
+
+.link--icon-right[class^="fr-fi-"], .link--icon-right[class*=" fr-fi-"] {
+  flex-direction: row-reverse;
+  overflow: initial;
+  max-width: none;
+  max-height: none;
+}
+
+.link--icon-right[class^="fr-fi-"]::before,
+.link--icon-right[class*=" fr-fi-"]::before {
+  margin-right: -0.25rem;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
+.link--align-on-content.link--icon-right[class^="fr-fi-"],
+.link--align-on-content.link--icon-right[class*=" fr-fi-"] {
+  margin-left: -0.75rem;
+  margin-right: -0.5rem;
+}
+
+.link--sm {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  min-height: 2rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+}
+
+.link--sm.link--align-on-content {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+.link--sm:not([class*="link--icon-"])[class^="fr-fi-"],
+.link--sm:not([class*="link--icon-"])[class*=" fr-fi-"] {
+  flex-direction: row;
+  overflow: hidden;
+  max-width: 2rem;
+  max-height: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.link--sm:not([class*="link--icon-"])[class^="fr-fi-"]::before,
+.link--sm:not([class*="link--icon-"])[class*=" fr-fi-"]::before {
+  margin-left: 0;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+.link--sm.link--align-on-content:not([class*="link--icon-"])[class^="fr-fi-"],
+.link--sm.link--align-on-content:not([class*="link--icon-"])[class*=" fr-fi-"] {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.link--sm.link--icon-left[class^="fr-fi-"],
+.link--sm.link--icon-left[class*=" fr-fi-"] {
+  flex-direction: row;
+  overflow: initial;
+  max-width: none;
+  max-height: none;
+}
+
+.link--sm.link--icon-left[class^="fr-fi-"]::before,
+.link--sm.link--icon-left[class*=" fr-fi-"]::before {
+  margin-left: -0.25rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+.link--sm.link--align-on-content.link--icon-left[class^="fr-fi-"],
+.link--sm.link--align-on-content.link--icon-left[class*=" fr-fi-"] {
+  margin-left: -0.5rem;
+  margin-right: -0.75rem;
+}
+
+.link--sm.link--icon-right[class^="fr-fi-"],
+.link--sm.link--icon-right[class*=" fr-fi-"] {
+  flex-direction: row-reverse;
+  overflow: initial;
+  max-width: none;
+  max-height: none;
+}
+
+.link--sm.link--icon-right[class^="fr-fi-"]::before,
+.link--sm.link--icon-right[class*=" fr-fi-"]::before {
+  margin-right: -0.25rem;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
+.link--sm.link--align-on-content.link--icon-right[class^="fr-fi-"],
+.link--sm.link--align-on-content.link--icon-right[class*=" fr-fi-"] {
+  margin-left: -0.75rem;
+  margin-right: -0.5rem;
+}
+
+.link--lg {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  min-height: 3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+}
+
+.link--lg.link--align-on-content {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.link--lg:not([class*="link--icon-"])[class^="fr-fi-"],
+.link--lg:not([class*="link--icon-"])[class*=" fr-fi-"] {
+  flex-direction: row;
+  overflow: hidden;
+  max-width: 3rem;
+  max-height: 3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.link--lg:not([class*="link--icon-"])[class^="fr-fi-"]::before,
+.link--lg:not([class*="link--icon-"])[class*=" fr-fi-"]::before {
+  margin-left: 0;
+  margin-right: 0.5rem;
+  font-size: 2rem;
+}
+
+.link--lg.link--align-on-content:not([class*="link--icon-"])[class^="fr-fi-"],
+.link--lg.link--align-on-content:not([class*="link--icon-"])[class*=" fr-fi-"] {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.link--lg.link--icon-left[class^="fr-fi-"],
+.link--lg.link--icon-left[class*=" fr-fi-"] {
+  flex-direction: row;
+  overflow: initial;
+  max-width: none;
+  max-height: none;
+}
+
+.link--lg.link--icon-left[class^="fr-fi-"]::before,
+.link--lg.link--icon-left[class*=" fr-fi-"]::before {
+  margin-left: -0.375rem;
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.link--lg.link--align-on-content.link--icon-left[class^="fr-fi-"],
+.link--lg.link--align-on-content.link--icon-left[class*=" fr-fi-"] {
+  margin-left: -0.625rem;
+  margin-right: -1rem;
+}
+
+.link--lg.link--icon-right[class^="fr-fi-"],
+.link--lg.link--icon-right[class*=" fr-fi-"] {
+  flex-direction: row-reverse;
+  overflow: initial;
+  max-width: none;
+  max-height: none;
+}
+
+.link--lg.link--icon-right[class^="fr-fi-"]::before,
+.link--lg.link--icon-right[class*=" fr-fi-"]::before {
+  margin-right: -0.375rem;
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.link--lg.link--align-on-content.link--icon-right[class^="fr-fi-"],
+.link--lg.link--align-on-content.link--icon-right[class*=" fr-fi-"] {
+  margin-left: -1rem;
+  margin-right: -0.625rem;
+}
+
+.link--close {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  min-height: 2rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  flex-direction: row-reverse;
+  overflow: initial;
+  max-width: none;
+  max-height: none;
+  margin-left: -0.75rem;
+  margin-right: -0.5rem;
+  display: flex;
+  margin-left: auto;
+}
+
+.link--close::before {
+  font: normal normal normal 1.5rem/1 dsfr-icons;
+  content: "";
+}
+
+.link--close::before {
+  margin-right: -0.25rem;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
+.link {
+  color: var(--bf500);
+  background-color: var(--t-plain);
+}
+
+:root:not([data-fr-theme="dark"]) .link {
+  --color-hover: var(--block-color-hover);
+  --color-active: var(--block-color-active);
+}
+
+:root:not([data-fr-theme="dark"]) [class*="fr-scheme-light"] .link,
+:root:not([data-fr-theme="dark"]) [class*="--scheme-light-"] .link {
+  --color-hover: var(--block-color-hover);
+  --color-active: var(--block-color-active);
+}
+
+:root:not([data-fr-theme="dark"]) [class*="fr-scheme-dark"] .link,
+:root:not([data-fr-theme="dark"]) [class*="--scheme-dark-"] .link {
+  --color-hover: var(--block-color-hover);
+  --color-active: var(--block-color-active);
+}
+
+:root[data-fr-theme="dark"] .link {
+  --color-hover: var(--block-color-hover);
+  --color-active: var(--block-color-active);
+}
+
+button.link[disabled], a.link:not([href]) {
+  color: var(--g600-g400);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link:not(a):not(:disabled):hover, a.link[href]:hover {
+    background-image: linear-gradient(0deg, var(--color-hover), var(--color-hover));
+  }
+
+  .link:not(a):not(:disabled):active, a.link[href]:active {
+    background-image: linear-gradient(0deg, var(--color-active), var(--color-active));
+  }
+}
