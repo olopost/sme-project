@@ -65,3 +65,17 @@ theme = "sme-project"
 After installation, your site looklike that
 
 ![example](site.png)
+
+# Usage 
+This project is more usefull with some other project.
+
+1. Binary note
+
+   Script to create note with archetype and tags
+   generate the correct file with tags in name
+   the archetype use the format use in file name to replace element
+ 
+ 2. edit webservice
+   
+   Edit web service permit to use Ctrl-n shortcut to create note
+   Edit web service permit to use edit button on webpage to directly edit note
