@@ -1,20 +1,20 @@
 ---
 project: {{ delimit (split (substr .Name  17) "-" | first 1) "" | humanize   }}
-description: "desc"
-type: "travaux"
+description: "Note de cadrage du {{ substr .Name 0 10 }}"
+type: "copil"
 date: {{ substr .Name 0 10 }}
 time: "{{ replace (substr .Name 11 5) "-" ":" }}"
 toc: false
 tags:
-- {{ delimit (split (substr .Name  17) "-" | first 1) "" | upper }}
+- COPIL
+{{ range (split (substr .Name  17) "-" )}}- {{ . | upper }}
+{{ end }}
 categories:
-- etude
+- COPIL
 ---
 # {{ delimit (split (substr .Name  17) "-" | first 2) " - " | humanize   }}
 
 **Date:** {{ dateFormat "2 January 2006" (substr .Name 0 10) }}, {{ replace (substr .Name 11 5) "-" ":" }}
 
-## Notes:
-
-
+*Objectifs: Presenter l'organisation à mettre en place*
 

@@ -7,7 +7,8 @@ time: "{{ replace (substr .Name 11 5) "-" ":" }}"
 toc: false
 tags:
 - CCB
-- {{ delimit (split (substr .Name  17) "-" | first 1) "" | upper }}
+{{ range (split (substr .Name  17) "-" )}}- {{ . | upper }}
+{{ end }}
 categories:
 - etude
 ---
@@ -15,8 +16,14 @@ categories:
 
 **Date:** {{ dateFormat "2 January 2006" (substr .Name 0 10) }}, {{ replace (substr .Name 11 5) "-" ":" }}
 
-# NEXT STEP
-# STEP TAKEN
+*Objectifs : presenter les tickets et demande reçu depuis la dernière CCB*
+*Debat sur les tickets reçu et priorisation des tickets*
+
+# Preparation
+
+# Objectifs
+
+# Decisions
 
 
 

@@ -6,7 +6,8 @@ date: {{ substr .Name 0 10 }}
 time: "{{ replace (substr .Name 11 5) "-" ":" }}"
 toc: false
 tags:
-- {{ delimit (split (substr .Name  17) "-" | first 1) "" | upper }}
+{{ range (split (substr .Name  17) "-" )}}- {{ . | upper }}
+{{ end }}
 categories:
 - note
 ---
