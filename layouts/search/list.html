@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html class="" lang="{{ .Site.LanguageCode }}">
+
+  <head>
+
+    <meta charset="utf-8" />
+    <title>{{ .Site.Title }}</title>
+    <link rel="canonical" href="{{ .Permalink }}" />
+    {{ partial "head-includes.html" . }}
+  </head>
+
+  <body lang="{{ .Site.LanguageCode }}" class="w-2/5 mx-auto py-10">
+    <section id="main">
+      <div>
+{{ partial "search-form.html" . }}
+
+<h1>Résultats de la recherche</h1>
+<ul id="results">
+    <li>
+        Enter a keyword above to search this site.
+    </li>
+</ul>
+
+      </div>
+    </section>
+
+    {{ partial "footer.html" . }}
+  </body>
+</html>

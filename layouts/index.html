@@ -16,7 +16,11 @@
           {{ .Site.Title }}
         <a href="https://edit:8020/update/main" class="bluebtn" style="font-size: 12pt;float: right;">Update</a>&nbsp;
         <a href="https://kb.local.meyn.fr/#" class="bluebtn" onclick="displayModal();" style="font-size: 12pt;float: right;">New</a>
-        </h1>
+{{ partial "search-form.html" . }}
+        <span class="fa fa-search"></span>
+    </button>
+
+</h1>
         <ul class="">
           <!-- pages -->
           
