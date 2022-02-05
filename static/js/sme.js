@@ -1,6 +1,6 @@
-document.onkeyup = function(e) {
-    if (e.ctrlKey && e.which == 78) {
-        dom = '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><p>Création d&apos;une nouvelle note<br/><i>Projet - Type de Documents - Tags</i><br/><input id="cmd"></input></p></div></div>';
+async function displayModal() {
+        page = await fetch("https://kb.local.meyn.fr/html/modal.html");
+        dom = await page.text();
         document.body.innerHTML += dom;
         var modal = document.getElementById("myModal");
         var span = document.getElementsByClassName("close")[0];
@@ -10,6 +10,13 @@ document.onkeyup = function(e) {
         span.onclick = function() {
             modal.style.display = "none";
         }
+
+}
+
+
+document.onkeyup = function(e) {
+    if (e.ctrlKey && e.which == 78) {
+        displayModal();
     }
     if (e.which == 13) {
         var cmd = document.getElementById("cmd");
@@ -24,7 +31,8 @@ document.onkeyup = function(e) {
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "https://edit:8020/new/?project=" + mycmd[0] +
                  "&type=" + mycmd[1] + "&tags=" + send_tags, true);
-        xhr.send();
+        var modal = document.getElementById("myModal");
         modal.style.display = "none";
+        xhr.send();
     }
 }

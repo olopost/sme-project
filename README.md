@@ -21,7 +21,7 @@ theme = "sme-project"
   categories = "categories"
 
 [[params.menu]]
-  name = "Calendar"
+    name = "Calendar"
   url = "all/"
 
 [[params.menu]]
@@ -65,6 +65,27 @@ theme = "sme-project"
 After installation, your site looklike that
 
 ![example](site.png)
+
+## adaptation
+Please add your note in `static/html/modal.html` directory for adding a specific branded modal page with at least this definition
+
+``` html
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;
+    </span>
+    <p>Création d&apos;une nouvelle note
+      <br/>
+      <i>Projet - Type de Documents - Tags
+      </i>
+      <br/>
+      <input id="cmd">
+</input>
+    </p>
+</div>
+```
+
 
 # Usage 
 This project is more usefull with some other project.
