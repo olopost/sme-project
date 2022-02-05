@@ -35,4 +35,18 @@ document.onkeyup = function(e) {
         modal.style.display = "none";
         xhr.send();
     }
+    if (e.key === "Escape") {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+
+    }
+    if ((e.key === "Tab") || (e.key === '`')) {
+        var modal = document.getElementById("myModal");
+        if ((modal == null) || (modal.style.display == "none")) {
+        displayModal();
+        } else {
+        modal.style.display = "none";
+        }
+
+    }
 }
