@@ -1,6 +1,6 @@
 ---
-project: {{ delimit (split (substr .Name  17) "-" | first 1) "" | humanize   }}
-description: "COPIL du {{ substr .Name 0 10 }}"
+project: "{{ .Dir | path.Base | humanize | title }}"
+description: "COPIL du {{ substr .Name 0 10 }} - projet : {{ .Dir | path.Base | humanize | title }}"
 type: "copil"
 date: {{ substr .Name 0 10 }}
 time: "{{ replace (substr .Name 11 5) "-" ":" }}"
@@ -10,23 +10,16 @@ tags:
 {{ range (split (substr .Name  17) "-" )}}- {{ . | upper }}
 {{ end }}
 categories:
-- COPIL
+- copil
 ---
-# {{ delimit (split (substr .Name  17) "-" | first 2) " - " | humanize   }}
+
+# {{ substr .Name  11 -10 | humanize | title }}
 
 **Date:** {{ dateFormat "2 January 2006" (substr .Name 0 10) }}, {{ replace (substr .Name 11 5) "-" ":" }}
 
-*Objectifs: Presenter l'avancement et faire un retour sur les difficultés*
+## Participants
 
-# Preparation
+## Ordre du jours
 
-
-# Synthese des activités
-
-# Difficulté
-
-# Impact sur le planning
-
-# Actions due
-
+## Note
 

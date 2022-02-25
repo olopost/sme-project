@@ -1203,8 +1203,16 @@ video {
  border-left-width:4px;
  border-left-style:solid;
  position:relative;
- border-color:#ed8936;
- background-color: #fffaf0;
+ border-color: rgba(255,163,0,1);
+ background-color: rgba(255,163,0,0.1);
+ display:block
+}
+.critical {
+ border-left-width:4px;
+ border-left-style:solid;
+ position:relative;
+ border-color:#ee2737;
+ background-color: rgba(238,39,55,0.1);
  display:block
 }
 .note {

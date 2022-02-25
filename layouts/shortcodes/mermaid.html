@@ -1,3 +1,2 @@
-{{- $id := dict "Content" (trim .Inner "\n") "Scratch" .Page.Scratch | partial "function/id.html" -}}
-<div class="mermaid" id="{{ $id }}"></div>
-{{- .Page.Scratch.SetInMap "this" "mermaid" true -}}
+{{ $_hugo_config := `{ "version": 1 }` }}
+<div class="mermaid" align="{{ if .Get "align" }}{{ .Get "align" }}{{ else }}center{{ end }}">{{ safeHTML .Inner }}</div>

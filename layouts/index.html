@@ -49,6 +49,7 @@
       </div>
       <!--Add page for special link or other-->
       {{ partial "kast.md" . | markdownify  }}
+      {{ "/all/reference/2022-02-03-17-23-reference-note-.md"| readFile | after 177 | markdownify  }}
     </section>
 
     {{ partial "footer.html" . }}
