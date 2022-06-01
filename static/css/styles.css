@@ -152,6 +152,11 @@ samp {
   font-size: 1em; /* 2 */
 }
 
+code pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
 /**
  * Add the correct font size in all browsers.
  */
@@ -1588,6 +1593,7 @@ video {
   --color-active: var(--block-color-active);
 }
 
+
 button.link[disabled], a.link:not([href]) {
   color: var(--g600-g400);
 }
@@ -1666,6 +1672,17 @@ tr:hover{
   font-weight: 140;
 }
 
+.reco {
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 12px;
+  background: #242A75;
+  color: #FFFFFF;
+  width: 50px;
+  line-height: 50px;
+  height: 50px;
+}
+
 .bluebtn {
   font-family: 'Univia Pro', sans-serif;
   float: left;
@@ -1686,4 +1703,13 @@ tr:hover{
   padding: 5px;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.highlight {
+    max-width: 800px;
+}
+
+.highlight pre {
+     white-space: pre-wrap;
+  word-break: break-word;
 }

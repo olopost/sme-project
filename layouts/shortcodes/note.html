@@ -5,5 +5,12 @@
 	</div>
 	<!-- <h2 id="{{if .Get 0}}{{.Get 0 | urlize}}{{else}}note{{end}}">{{if .Get 0}}{{.Get 0 | markdownify}}{{else}}Note{{end}}</h2> -->
 	<!-- <h3>Note</h3> -->
+	{{ if .Get "rec" }}
+	<table style="margin:0px;">
+		<td><div class="reco">{{ .Get "rec" }}</div></td>
+		<td><div class="admonition-content">{{- .Inner -}}</div></td>
+	</table>
+	{{ else }}
 	<div class="admonition-content">{{- .Inner -}}</div>
+	{{ end }}
 </aside>
