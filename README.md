@@ -100,3 +100,7 @@ This project is more usefull with some other project.
    
    Edit web service permit to use Ctrl-n shortcut to create note
    Edit web service permit to use edit button on webpage to directly edit note
+
+# Credits
+
+*This theme is inspired by : [James Adams - Hugo Clinic Notes themes](https://github.com/jmablog/hugo-clinic-notes)*
