@@ -1,3 +1,38 @@
+function updProgress() {
+    document.getElementById("updtbtn").innerHTML = "Loading...";
+}
+
+function updLoad() {
+    document.getElementById("updtbtn").innerHTML = "Done";
+    setTimeout(5000);
+    document.getElementById("updtbtn").innerHTML = "Update";
+}
+function updError() {
+    document.getElementById("updtbtn").innerHTML = "Error";
+    document.getElementById("updtbtn").className = "btn-danger";
+    setTimeout(5000);
+    document.getElementById("updtbtn").innerHTML = "Update";
+    document.getElementById("updtbtn").className = "bluebtn";
+}
+function updAbort() {
+    document.getElementById("updtbtn").innerHTML = "Abort";
+    document.getElementById("updtbtn").className = "btn-danger";
+    setTimeout(5000);
+    document.getElementById("updtbtn").innerHTML = "Update";
+    document.getElementById("updtbtn").className = "bluebtn";
+}
+
+async function Kbupdate() {
+        var xhr = new XMLHttpRequest();
+    xhr.addEventListener("progress", updProgress, false);
+    xhr.addEventListener("load", updLoad, false);
+    xhr.addEventListener("error", updError, false);
+    xhr.addEventListener("abort", updAbort, false);
+        xhr.open("GET", "https://edit:8020/update/", true);
+        xhr.send();
+}
+
+
 async function displayModal() {
         page = await fetch("https://kb.local.meyn.fr/html/modal.html");
         dom = await page.text();
