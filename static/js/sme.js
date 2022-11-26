@@ -1,35 +1,39 @@
+function updNormal() {
+    document.getElementById("updtbtn").innerHTML = "Update";
+    document.getElementById("updtbtn").className = "bluebtn";
+}
+
 function updProgress() {
+    console.log("update progress");
     document.getElementById("updtbtn").innerHTML = "Loading...";
 }
 
 function updLoad() {
+    console.log("update load");
     document.getElementById("updtbtn").innerHTML = "Done";
-    setTimeout(5000);
-    document.getElementById("updtbtn").innerHTML = "Update";
+    setTimeout(updNormal, 5000);
 }
 function updError() {
+    console.error("update error");
     document.getElementById("updtbtn").innerHTML = "Error";
     document.getElementById("updtbtn").className = "btn-danger";
-    setTimeout(5000);
-    document.getElementById("updtbtn").innerHTML = "Update";
-    document.getElementById("updtbtn").className = "bluebtn";
+    setTimeout(updNormal, 5000);
 }
 function updAbort() {
+    console.error("update abort");
     document.getElementById("updtbtn").innerHTML = "Abort";
     document.getElementById("updtbtn").className = "btn-danger";
-    setTimeout(5000);
-    document.getElementById("updtbtn").innerHTML = "Update";
-    document.getElementById("updtbtn").className = "bluebtn";
+    setTimeout(updNormal, 5000);
 }
 
 async function Kbupdate() {
-        var xhr = new XMLHttpRequest();
-    xhr.addEventListener("progress", updProgress, false);
-    xhr.addEventListener("load", updLoad, false);
-    xhr.addEventListener("error", updError, false);
-    xhr.addEventListener("abort", updAbort, false);
-        xhr.open("GET", "https://edit:8020/update/", true);
-        xhr.send();
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://edit:8020/update/", true);
+    xhr.onloadstart = updProgress;
+    xhr.onabort = updAbort;
+    xhr.onerror = updError;
+    xhr.onloadend = updLoad;
+    xhr.send();
 }
 
 

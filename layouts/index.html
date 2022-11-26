@@ -16,7 +16,12 @@
           {{ .Site.Title }}
         <a id="updtbtn" href="https://kb.local.meyn.fr/#" class="bluebtn" onclick="Kbupdate();" style="font-size: 12pt;float: right;">Update</a>&nbsp;
         <a href="https://kb.local.meyn.fr/#" class="bluebtn" onclick="displayModal();" style="font-size: 12pt;float: right;">New</a>
-{{ partial "search-form.html" . }}
+        <div id="navbarsearch" class="navbar-right align-right navbar-dark bg-dark">
+          <form action="/search" method="get" class="form-inline">
+            <input class="form-control mr-sm-2" id="search-input" name="q" type="search" placeholder="Search" aria-label="Search"></input>
+            <button class="btn bluebtn" style="float:right;font-size:12pt;" type="submit">Search</button>
+          </form>
+        </div>
         <span class="fa fa-search"></span>
     </button>
 
