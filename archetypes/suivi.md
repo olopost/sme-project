@@ -1,5 +1,7 @@
 ---
 project: {{ delimit (split (substr .Name  17) "-" | first 1) "" | humanize   }}
+suivi: 
+- {{ delimit (split (substr .Name  17) "-" | first 1) "" | upper }}
 description: "suivi {{ substr .Name 0 10 }}"
 type: "suivi"
 date: {{ substr .Name 0 10 }}
